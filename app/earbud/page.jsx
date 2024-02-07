@@ -71,7 +71,7 @@ const EarbudPage = () => {
         </div>
         <button style={{ ...buttonStyle, marginTop: '16px', marginBottom: '50px',}}>Add To Cart</button>
         <h2>Specifications</h2>
-        <ul style={{ textAlign: 'left' }}>
+        <ul style={{ textAlign: 'center' }}>
           <li>24-bit Hi-Fi</li>
           <li>SSC Hi-Fi* , AAC , SBC</li>
           <li>Direct Multi channel (5.1ch/7.1ch/Dolby Atmos)</li>

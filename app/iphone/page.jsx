@@ -70,7 +70,7 @@ const IphonePage = () => {
         </div>
         <button style={{ ...buttonStyle, marginTop: '16px' }}>Add To Cart</button>
         <h2>Specifications</h2>
-        <ul style={{ textAlign: 'left' }}>
+        <ul style={{ textAlign: 'center' }}>
           <li>A16 Bionic chip (4 nm)</li>
           <li>6.1″ inch Amoled, 60 Hz</li>
           <li>48 MP Main + 12 MP Ultra Wide</li>

@@ -70,7 +70,7 @@ const AsusPage = () => {
         </div>
         <button style={{ ...buttonStyle, marginTop: '16px' }}>Add To Cart</button>
         <h2>Specifications</h2>
-        <ul style={{ textAlign: 'left' }}>
+        <ul style={{ textAlign: 'center' }}>
           <li>Windows 11 Home (64-bit)</li>
           <li>Intel® Core™ i9-13900H Processor 2.6 GHz (24M Cache, up to 5.4 GHz, 14 cores: 6 P-cores and 8 E-cores)</li>
           <li>NVIDIA® GeForce RTX™ 3050</li>
