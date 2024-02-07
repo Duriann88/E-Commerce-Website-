@@ -1,9 +1,8 @@
-// components/ContactHelpPage.js
 "use client";
 import React, { useState } from 'react';
 
 const ContactHelpPage = () => {
-    const [faqItems, setFaqItems] = useState([
+    const [faqItems] = useState([
         {
             id: 1,
             question: 'How can I track my order?',
@@ -14,7 +13,6 @@ const ContactHelpPage = () => {
             question: 'What is your return policy?',
             answer: 'Our return policy allows you to return items within 30 days of purchase. Please see our Returns and Exchanges page for more details.',
         },
-        // Add more FAQ items as needed
     ]);
 
     const [contactFormData, setContactFormData] = useState({
@@ -32,67 +30,77 @@ const ContactHelpPage = () => {
 
     const handleContactFormSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission logic (e.g., send data to server)
         console.log('Form submitted:', contactFormData);
-        // You can add more sophisticated logic here (e.g., sending data to a server)
     };
 
     return (
-        <div>
-            <section>
-                <h1>Contact Us</h1>
-                <p>
+        <div style={{ fontFamily: 'Arial, sans-serif', maxWidth: '600px', margin: '0 auto' }}>
+            <section style={{ marginBottom: '30px' }}>
+                <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Contact Us</h1>
+                <p style={{ fontSize: '16px', marginBottom: '20px' }}>
                     Have a question or need assistance? Feel free to reach out to our
                     customer support team.
                 </p>
+                <p style={{ fontSize: '16px', marginBottom: '5px' }}>
+                    Email: Evolve@gmail.com
+                </p>
+                <p style={{ fontSize: '16px', marginBottom: '5px' }}>
+                    Phone: 123-456-7890
+                </p>
+                <p style={{ fontSize: '16px', marginBottom: '20px' }}>
+                    Address: 123 Street, City, Country
+                </p>
                 <form onSubmit={handleContactFormSubmit}>
-                    <label htmlFor="name">Name:</label>
+                    <label htmlFor="name" style={{ fontSize: '16px', display: 'block' }}>Name:</label>
                     <input
                         type="text"
                         id="name"
                         name="name"
                         value={contactFormData.name}
                         onChange={handleContactFormChange}
+                        style={{ width: '100%', padding: '10px', marginBottom: '10px' }}
                         required
                     />
 
-                    <label htmlFor="email">Email:</label>
+                    <label htmlFor="email" style={{ fontSize: '16px', display: 'block' }}>Email:</label>
                     <input
                         type="email"
                         id="email"
                         name="email"
                         value={contactFormData.email}
                         onChange={handleContactFormChange}
+                        style={{ width: '100%', padding: '10px', marginBottom: '10px' }}
                         required
                     />
 
-                    <label htmlFor="message">Message:</label>
+                    <label htmlFor="message" style={{ fontSize: '16px', display: 'block' }}>Message:</label>
                     <textarea
                         id="message"
                         name="message"
                         rows="4"
                         value={contactFormData.message}
                         onChange={handleContactFormChange}
+                        style={{ width: '100%', padding: '10px', marginBottom: '20px' }}
                         required
                     ></textarea>
 
-                    <button type="submit">Submit</button>
+                    <button type="submit" style={{ fontSize: '16px', padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Submit</button>
                 </form>
             </section>
 
             <section>
-                <h1>Help Center</h1>
-                <p>
+                <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Help Center</h1>
+                <p style={{ fontSize: '16px', marginBottom: '20px' }}>
                     Explore our Help Center to find answers to frequently asked questions
                     and get assistance with common issues.
                 </p>
 
-                <ul>
+                <ul style={{ listStyle: 'none', padding: '0' }}>
                     {faqItems.map((faq) => (
-                        <li key={faq.id}>
+                        <li key={faq.id} style={{ marginBottom: '20px' }}>
                             <details>
-                                <summary>{faq.question}</summary>
-                                <p>{faq.answer}</p>
+                                <summary style={{ fontSize: '18px', marginBottom: '10px', cursor: 'pointer' }}>{faq.question}</summary>
+                                <p style={{ fontSize: '16px', marginLeft: '10px' }}>{faq.answer}</p>
                             </details>
                         </li>
                     ))}
