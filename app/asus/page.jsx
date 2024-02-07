@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 const AsusPage = () => {
   const [images, setImages] = useState({
-    img1: "/asus vivobook16.jpg",
+    img1: "/Asus computer.jpg",
     img2: "/asus vivobook16_2.jpg",
     img3: "/asus vivobook_3.jpg"
   });
@@ -43,7 +43,7 @@ const AsusPage = () => {
     border: 'none'
   };
 
-  return (
+  return(
     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: '16px', alignItems: 'center' }}>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', width: '50%' }}>
         <img src={activeImg} style={imageStyle} />
@@ -62,7 +62,7 @@ const AsusPage = () => {
           for creative work or gaming fun, its 13th Gen Intel® Core™ H-series processor and
           NVIDIA® GeForce RTX™ 3050 Laptop GPU give you all the multitasking power you need.
         </p>
-        <h6 style={{ color: '#293039', fontWeight: 'bold' }}>$1,107.00</h6>
+        <h6 style={{ color: '#293039', fontWeight: 'bold', fontSize:"20px"}}>$1,107.00</h6>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <button style={buttonStyle} onClick={() => setAmount((prev) => prev - 1)}>-</button>
           <span style={{ padding: '12px 24px', borderRadius: '8px', backgroundColor: '#E5E7EB', fontWeight: 'bold' }}>{amount}</span>
@@ -70,18 +70,18 @@ const AsusPage = () => {
         </div>
         <button style={{ ...buttonStyle, marginTop: '16px' }}>Add To Cart</button>
         <h2>Specifications</h2>
-        <ul style={{ textAlign: 'left' }}>
+        <ul style={{ textAlign: 'center' }}>
           <li>Windows 11 Home (64-bit)</li>
           <li>Intel® Core™ i9-13900H Processor 2.6 GHz (24M Cache, up to 5.4 GHz, 14 cores: 6 P-cores and 8 E-cores)</li>
           <li>NVIDIA® GeForce RTX™ 3050</li>
-          <li>16.0 WUXGA(WU) 1920X1200 Wide View</li>
+          <li>16.0" WUXGA(WU) 1920X1200 Wide View</li>
           <li>8GB DDR4 + 8GB DDR4 SO-DIMM</li>
           <li>1TB M.2 NVMe™ PCIe® 3.0 SSD</li>
           <li>2 Years International Warranty</li>
         </ul>
       </div>
     </div>
-  );
+  )
 };
 
 export default AsusPage;

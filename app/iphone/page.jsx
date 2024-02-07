@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 const IphonePage = () => {
   const [images, setImages] = useState({
-    img1: "/iphone 15_1.jpg",
+    img1: "/Iphone.jpg",
     img2: "/iphone15_2.jpg",
     img3: "/iphone15_3.jpg",
   });
@@ -54,7 +54,7 @@ const IphonePage = () => {
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <span style={{ color: '#6B46C1', fontWeight: 'bold' }}>Brand New</span>
-        <h1 style={{ fontSize: '24px', fontWeight: 'bold' }}>Asus Vivobook 16X</h1>
+        <h1 style={{ fontSize: '24px', fontWeight: 'bold' }}>iPhone 15</h1>
         <p style={{ color: '#4B5563', width: '80%' }}>
           The innovative new design features back glass that has colour infused
           throughout the material. A custom dual ion-exchange process for the glass,
@@ -62,7 +62,7 @@ const IphonePage = () => {
           Now the Main camera shoots in super-high resolution. So it’s easier than ever to take
           standout photos with amazing detail — from snapshots to stunning landscapes. 
         </p>
-        <h6 style={{ color: '#6B46C1', fontWeight: 'bold' }}>$1,107.00</h6>
+        <h6 style={{ color: '#6B46C1', fontWeight: 'bold', fontSize:"20px"}}>$1,107.00</h6>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <button style={buttonStyle} onClick={() => setAmount((prev) => prev - 1)}>-</button>
           <span style={{ padding: '12px 24px', borderRadius: '8px', backgroundColor: '#E5E7EB', fontWeight: 'bold' }}>{amount}</span>
@@ -70,7 +70,7 @@ const IphonePage = () => {
         </div>
         <button style={{ ...buttonStyle, marginTop: '16px' }}>Add To Cart</button>
         <h2>Specifications</h2>
-        <ul style={{ textAlign: 'left' }}>
+        <ul style={{ textAlign: 'center' }}>
           <li>A16 Bionic chip (4 nm)</li>
           <li>6.1″ inch Amoled, 60 Hz</li>
           <li>48 MP Main + 12 MP Ultra Wide</li>
@@ -82,3 +82,4 @@ const IphonePage = () => {
 };
 
 export default IphonePage;
+
