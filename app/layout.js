@@ -1,4 +1,3 @@
-
 import Navbar from "@/app/NavBar/Navbar";
 
 export default function RootLayout({ children }) {

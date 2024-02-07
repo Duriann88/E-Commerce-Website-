@@ -1,4 +1,4 @@
-import React from 'react';
+
 import styles from './Navbar.module.css';
 import Link from 'next/link';
 
@@ -25,7 +25,7 @@ export default function Navbar() {
         <Link href="/contact" className={styles.navItem}>
           Contact
         </Link>
-        <Link href="../profile" className={`${styles.navItem}`}>
+        <Link href="/profile" className={`${styles.navItem}`}>
           Profile
         </Link>
       </div>
