@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 
 const ProductPage = () => {
   const [images, setImages] = useState({
-    img1: "/Product Pictures/asus vivobook16.jpg",
-    img2: "/Product Pictures/asus vivobook16_2.jpg",
-    img3: "/Product Pictures/asus vivobook_3.jpg"
+    img1: "/asus vivobook16.jpg",
+    img2: "/asus vivobook16_2.jpg",
+    img3: "/asus vivobook_3.jpg"
   });
 
   const [activeImg, setActiveImage] = useState(images.img1);
