@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './Navbar.module.css';
 import Link from 'next/link';
 
@@ -9,41 +10,28 @@ export default function Navbar() {
         <span className={styles.companyName}>Evolve</span>
       </div>
       <div className={styles.navLinks}>
-        <Link href="/">
-          <a className={styles.navItem}>Home</a>
+        <Link href="/" className={styles.navItem}>
+          Home
         </Link>
         <div className={styles.dropdown}>
           <span className={styles.navItem}>Products</span>
           <div className={styles.dropdownContent}>
-            <Link href="/products/category1">
-              <a>Computers</a>
-            </Link>
-            <Link href="/products/category2">
-              <a>Phones</a>
-            </Link>
-            <Link href="/products/category3">
-              <a>Earbuds</a>
-            </Link>
-            <Link href="/products/category4">
-              <a>All Products</a>
-            </Link>
+            <Link href="/products/category1">Computers</Link>
+            <Link href="/products/category2">Phones</Link>
+            <Link href="/products/category3">Earbuds</Link>
+            <Link href="/products/category4">All Products</Link>
+            {/* Add more links for different product categories */}
           </div>
         </div>
-        <Link href="/contactandHelp">
-          <a className={styles.navItem}>Contact</a>
+        <Link href="/contactandHelp" className={styles.navItem}>
+          Contact
         </Link>
-        <Link href="/profile">
-          <a className={styles.navItem}>Profile</a>
+        <Link href="/profile" className={`${styles.navItem}`}>
+          Profile
         </Link>
       </div>
     </nav>
   );
 }
-
-
-
-
-
-
 
 
