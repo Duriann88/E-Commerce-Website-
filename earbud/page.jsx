@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 
-const ProductPage = () => {
+const EarbudPage = () => {
   const [images, setImages] = useState({
-    img1: "/Product Pictures/EarBud_2.png",
-    img2: "/Product Pictures/EarBud_1.png",
-    img3: "/Product Pictures/Earbud_3.png"
+    img1: "/EarBud_2.png",
+    img2: "/EarBud_1.png",
+    img3: "/Earbud_3.png"
   });
 
   const [activeImg, setActiveImage] = useState(images.img1);
@@ -83,4 +83,4 @@ const ProductPage = () => {
   );
 };
 
-export default ProductPage;
+export default EarbudPage;
