@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 const IphonePage = () => {
   const [images, setImages] = useState({
-    img1: "/iphone 15_1.jpg",
+    img1: "/Iphone.jpg",
     img2: "/iphone15_2.jpg",
     img3: "/iphone15_3.jpg",
   });
@@ -62,7 +62,7 @@ const IphonePage = () => {
           Now the Main camera shoots in super-high resolution. So it’s easier than ever to take
           standout photos with amazing detail — from snapshots to stunning landscapes. 
         </p>
-        <h6 style={{ color: '#6B46C1', fontWeight: 'bold' }}>$1,107.00</h6>
+        <h6 style={{ color: '#6B46C1', fontWeight: 'bold', fontSize:"20px"}}>$1,107.00</h6>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <button style={buttonStyle} onClick={() => setAmount((prev) => prev - 1)}>-</button>
           <span style={{ padding: '12px 24px', borderRadius: '8px', backgroundColor: '#E5E7EB', fontWeight: 'bold' }}>{amount}</span>
@@ -82,3 +82,4 @@ const IphonePage = () => {
 };
 
 export default IphonePage;
+
