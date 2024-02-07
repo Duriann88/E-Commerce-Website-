@@ -1,5 +1,3 @@
-// components/ProductShowcase.js
-
 import React from 'react';
 import styles from './ProductShowcase.module.css'; // Import CSS module for styling
 import Link from 'next/link';
@@ -8,20 +6,28 @@ const ProductShowcase = () => {
   return (
     <section className={styles['product-showcase']}>
       <div className={styles['product-title']}>
-        <a href="/products">Our Products</a>
+        <Link href="/products">
+          <a>Our Products</a>
+        </Link>
       </div>
       {/* Category Carousel */}
       <div className={`${styles['horizontal-image-movement']} ${styles['category-carousel']}`}>
         {/* Link images to product details */}
-        <a href="/product-details/category1">
-          <img src="/Asus computer.jpg" alt="Computer" />
-        </a>
-        <a href="/product-details/category2">
-          <img src="/Iphone.jpg" alt="Iphone" />
-        </a>
-        <a href = "/product-detail/category3">
-          <img src="/Evolve earbud.jpg" alt="Earbud"/>
-        </a>
+        <Link href="/product-details/category1">
+          <a>
+            <img src="/Asus computer.jpg" alt="Computer" />
+          </a>
+        </Link>
+        <Link href="/product-details/category2">
+          <a>
+            <img src="/Iphone.jpg" alt="Iphone" />
+          </a>
+        </Link>
+        <Link href="/product-detail/category3">
+          <a>
+            <img src="/Evolve earbud.jpg" alt="Earbud" />
+          </a>
+        </Link>
       </div>
     </section>
   );
