@@ -63,7 +63,7 @@ const EarbudPage = () => {
         24-bit high-quality sound Active Noise Cancelling (ANC) is better than ever. With 3 high SNR (Signal-to-Noise Ratio) microphones
         the Advanced Buds2 Pro tracks and eliminates more outside sound — even soft sounds like wind
         </p>
-        <h6 style={{ color: '#293039', fontWeight: 'bold' }}>$190.00</h6>
+        <h6 style={{ color: '#293039', fontWeight: 'bold', fontSize:"20px" }}>$190.00</h6>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <button style={buttonStyle} onClick={() => setAmount((prev) => prev - 1)}>-</button>
           <span style={{ padding: '12px 24px', borderRadius: '8px', backgroundColor: '#E5E7EB', fontWeight: 'bold' }}>{amount}</span>
@@ -85,3 +85,4 @@ const EarbudPage = () => {
 };
 
 export default EarbudPage;
+
