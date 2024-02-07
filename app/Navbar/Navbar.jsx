@@ -19,7 +19,7 @@ export default function Navbar() {
             <Link href="/products/category1">Computers</Link>
             <Link href="/products/category2">Phones</Link>
             <Link href="/products/category3">Earbuds</Link>
-            <Link href="/products/category4">All Products</Link>
+            <Link href="/products">All Products</Link>
             {/* Add more links for different product categories */}
           </div>
         </div>
