@@ -1,7 +1,7 @@
 // pages/index.js
 "use client";
 import { useState } from "react";
-import PageLayout from '/layout';
+import PageLayout from '/app/layout';
 
 const NAMES = [
   "Andrea",
