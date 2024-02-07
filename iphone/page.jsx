@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ProductPage = () => {
+const IphonePage = () => {
   const [images, setImages] = useState({
     img1: "/iphone 15_1.jpg",
     img2: "/iphone15_2.jpg",
@@ -80,4 +80,4 @@ const ProductPage = () => {
   );
 };
 
-export default ProductPage;
+export default IphonePage;
