@@ -23,7 +23,7 @@ export default function Navbar() {
             {/* Add more links for different product categories */}
           </div>
         </div>
-        <Link href="/contactandHelp" className={styles.navItem}>
+        <Link href="/contactAndHelp" className={styles.navItem}>
           Contact
         </Link>
         <Link href="/profile" className={`${styles.navItem}`}>
