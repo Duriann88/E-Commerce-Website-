@@ -54,7 +54,7 @@ const IphonePage = () => {
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <span style={{ color: '#6B46C1', fontWeight: 'bold' }}>Brand New</span>
-        <h1 style={{ fontSize: '24px', fontWeight: 'bold' }}>Asus Vivobook 16X</h1>
+        <h1 style={{ fontSize: '24px', fontWeight: 'bold' }}>iPhone 15</h1>
         <p style={{ color: '#4B5563', width: '80%' }}>
           The innovative new design features back glass that has colour infused
           throughout the material. A custom dual ion-exchange process for the glass,
