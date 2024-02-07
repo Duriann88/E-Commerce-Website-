@@ -5,7 +5,7 @@ import { Container } from 'react-bootstrap';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Cancel from './cancel/page';
 import Store from './store/page';
-import Success from './success/page';
+import Success from './app/success/page';
 import CartProvider from './CartContext';
 import CartModal from './components/CartModal';
 
