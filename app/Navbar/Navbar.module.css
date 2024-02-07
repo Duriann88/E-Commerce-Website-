@@ -1,0 +1,96 @@
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  color: #293039;
+  font-family: 'Slab Serif', serif;
+  border-radius: 10px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.companyName {
+  font-weight: normal;
+  font-size: 24px;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: space-between; /* Add this line for equal spacing */
+  position: relative;
+}
+
+.navItem {
+  text-decoration: none;
+  color: #293039;
+  margin-left: 20px;
+  font-family: 'Modern Font', sans-serif;
+  position: relative;
+}
+
+.navItem:hover {
+  color: #f7f7f9;
+}
+
+/* Dropdown menu styles */
+.dropdown {
+  position: relative;
+  z-index: 1000; /* Ensure dropdown is above other elements */
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  top: calc(100% - 5px); /* Adjust to overlap with the triggering element */
+  left: 0;
+  background-color: white;
+  min-width: 160px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.2s ease; /* Add transition for smooth effect */
+  opacity: 0; /* Initially hide the menu */
+  pointer-events: none; /* Prevent menu from being interacted with */
+  transition-delay: 0.5s; /* Delay before menu disappears */
+  z-index: 1000; /* Ensure dropdown is above other elements */
+}
+
+.dropdown:hover .dropdownContent,
+.dropdownContent:hover {
+  display: block;
+  opacity: 1; /* Show the menu when hovering */
+  pointer-events: auto; /* Allow menu interaction when visible */
+}
+
+.dropdownContent a {
+  display: block;
+  padding: 8px 10px;
+  color: #293039;
+  text-decoration: none;
+}
+
+.dropdownContent a:hover {
+  background-color: #f7f7f9;
+}
+
+/* Profile section */
+.profile {
+  margin-left: auto; /* Push the profile section to the right */
+}
+
+/* Cart button */
+.cart {
+  margin-left: 20px; /* Add margin between profile and cart */
+}

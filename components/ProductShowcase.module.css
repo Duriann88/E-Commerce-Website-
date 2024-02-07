@@ -1,0 +1,43 @@
+/* components/ProductShowcase.module.css */
+
+.product-showcase {
+  text-align: left; /* Change to left alignment */
+  padding: 50px 20px;
+  font-family: 'Arial', sans-serif; /* Choose an appropriate font */
+}
+
+.product-title {
+  margin-bottom: 20px; /* Add margin below the title */
+  font-size: 24px; /* Increase font size */
+}
+
+.product-title a {
+  color: #293039; /* Change text color of the link to #293039 */
+  text-decoration: none; /* Remove underline from the link */
+}
+
+.product-showcase .featured-products {
+  margin-bottom: 50px;
+}
+
+.product-showcase .category-carousel {
+  overflow: hidden; /* Hide overflow */
+  white-space: nowrap; /* Prevent images from wrapping to new lines */
+}
+
+.product-showcase .category-carousel img {
+  display: inline-block; /* Display images in a line */
+  width: 200px; /* Set width of the image */
+  height: 200px; /* Set height of the image */
+  margin-right: 10px; /* Add margin between images */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+
+
+
+
+
+
+
+

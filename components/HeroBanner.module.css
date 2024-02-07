@@ -1,0 +1,19 @@
+/* components/HeroBanner.module.css */
+
+.Container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.Video {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+
+
+
