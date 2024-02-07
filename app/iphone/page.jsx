@@ -1,11 +1,11 @@
+"use client";
 import React, { useState } from 'react';
 
-
-const EarbudPage = () => {
+const IphonePage = () => {
   const [images, setImages] = useState({
-    img1: "/EarBud_2.png",
-    img2: "/EarBud_1.png",
-    img3: "/Earbud_3.png"
+    img1: "/iphone 15_1.jpg",
+    img2: "/iphone15_2.jpg",
+    img3: "/iphone15_3.jpg",
   });
 
   const [activeImg, setActiveImage] = useState(images.img1);
@@ -46,7 +46,6 @@ const EarbudPage = () => {
     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: '16px', alignItems: 'center' }}>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', width: '50%' }}>
         <img src={activeImg} style={imageStyle} />
-
         <div style={thumbnailContainerStyle}>
           <img src={images.img1} style={thumbnailStyle} onClick={() => setActiveImage(images.img1)} />
           <img src={images.img2} style={thumbnailStyle} onClick={() => setActiveImage(images.img2)} />
@@ -54,33 +53,32 @@ const EarbudPage = () => {
         </div>
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <span style={{ color: '#6B46C1', fontWeight: 'bold', }}>Clearance Sale</span>
+        <span style={{ color: '#6B46C1', fontWeight: 'bold' }}>Brand New</span>
         <h1 style={{ fontSize: '24px', fontWeight: 'bold' }}>Asus Vivobook 16X</h1>
-        <p style={{ color: '#293039', width: '80%' }}>
-        Every note sounds like the real thing because clear audio starts at the source with your favourite devices.
-        The updated <strong>Evolve</strong> Seamless Codec encodes the full 24-bit audio to decode on the Evolve Advanced Buds2 Pro, maintaining that same
-        24-bit high-quality sound Active Noise Cancelling (ANC) is better than ever. With 3 high SNR (Signal-to-Noise Ratio) microphones
-        the Advanced Buds2 Pro tracks and eliminates more outside sound — even soft sounds like wind
+        <p style={{ color: '#4B5563', width: '80%' }}>
+          The innovative new design features back glass that has colour infused
+          throughout the material. A custom dual ion-exchange process for the glass,
+          and an aerospace-grade aluminium enclosure, help make iPhone 15 incredibly durable.
+          Now the Main camera shoots in super-high resolution. So it’s easier than ever to take
+          standout photos with amazing detail — from snapshots to stunning landscapes. 
         </p>
-        <h6 style={{ color: '#293039', fontWeight: 'bold' }}>$190.00</h6>
+        <h6 style={{ color: '#6B46C1', fontWeight: 'bold' }}>$1,107.00</h6>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <button style={buttonStyle} onClick={() => setAmount((prev) => prev - 1)}>-</button>
           <span style={{ padding: '12px 24px', borderRadius: '8px', backgroundColor: '#E5E7EB', fontWeight: 'bold' }}>{amount}</span>
           <button style={buttonStyle} onClick={() => setAmount((prev) => prev + 1)}>+</button>
         </div>
-        <button style={{ ...buttonStyle, marginTop: '16px', marginBottom: '50px',}}>Add To Cart</button>
+        <button style={{ ...buttonStyle, marginTop: '16px' }}>Add To Cart</button>
         <h2>Specifications</h2>
         <ul style={{ textAlign: 'left' }}>
-          <li>24-bit Hi-Fi</li>
-          <li>SSC Hi-Fi* , AAC , SBC</li>
-          <li>Direct Multi channel (5.1ch/7.1ch/Dolby Atmos)</li>
-          <li>coaxial 2-way speaker – woofer and tweeter</li>
-          <li>360 dio support Deep Neural Network + Personalized Beamforming</li>
-          <li>Auto Switching</li>
+          <li>A16 Bionic chip (4 nm)</li>
+          <li>6.1″ inch Amoled, 60 Hz</li>
+          <li>48 MP Main + 12 MP Ultra Wide</li>
+          <li>3349 mAh 20 Watt Charger</li>
         </ul>
       </div>
     </div>
   );
 };
 
-export default EarbudPage;
+export default IphonePage;

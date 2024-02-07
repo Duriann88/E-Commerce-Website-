@@ -12,13 +12,13 @@ const ProductShowcase = () => {
       {/* Category Carousel */}
       <div className={`${styles['horizontal-image-movement']} ${styles['category-carousel']}`}>
         {/* Link images to product details */}
-        <Link href="/AsusPage">
+        <Link href="/asus">
           <img src="/Asus computer.jpg" alt="Computer" />
         </Link>
         <a href="/iphone">
           <img src="/Iphone.jpg" alt="Iphone" />
         </a>
-        <a href = "@/EarbudPage/page">
+        <a href = "earbud">
           <img src="/Evolve earbud.jpg" alt="Earbud"/>
         </a>
       </div>
