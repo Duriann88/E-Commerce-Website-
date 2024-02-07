@@ -1,5 +1,5 @@
-// components/StoresPage.js
-"use client";
+
+"use client"
 import React, { useState } from 'react';
 
 const StoresPage = () => {
@@ -13,55 +13,62 @@ const StoresPage = () => {
         },
         {
             id: 2,
-            name: 'Fashion Junction',
-            category: 'Fashion',
+            name: 'Phones Junction',
+            category: 'Phones',
             location: '456 Fashion Avenue, Singapore',
-            description: 'Discover the latest trends in clothing and accessories.',
+            description: 'Discover the latest trends in phones and accessories.',
         },
         {
             id: 3,
-            name: 'Bookworm Emporium',
-            category: 'Books',
+            name: 'Monitors Emporium',
+            category: 'Monitors',
             location: '789 Bookworm Lane, Singapore',
-            description: 'A paradise for book lovers, offering a wide selection of books.',
+            description: 'A paradise for monitor lovers, offering a wide selection of monitors.',
         },
         // Add more stores
         {
             id: 4,
-            name: 'Home Essentials',
-            category: 'Home Goods',
+            name: 'Earbuds Essentials',
+            category: 'Earbuds',
             location: '101 Home Street, Singapore',
-            description: 'Find everything you need to decorate and furnish your home.',
+            description: 'Find everything you need for earbuds.',
         },
         {
             id: 5,
-            name: 'Sporty Gear',
-            category: 'Sports',
+            name: 'Keyboards Gear',
+            category: 'Keyboards',
             location: '202 Sports Avenue, Singapore',
-            description: 'Get equipped for your favorite sports activities with our range of gear.',
+            description: 'Get equipped with our range of keyboard gear.',
         },
     ]);
 
     const [filteredStores, setFilteredStores] = useState(stores);
     const [categoryFilter, setCategoryFilter] = useState('');
+    const [searchQuery, setSearchQuery] = useState('');
 
     const handleCategoryChange = (selectedCategory) => {
         setCategoryFilter(selectedCategory);
-        if (selectedCategory === '') {
-            setFilteredStores(stores);
-        } else {
-            const filtered = stores.filter((store) => store.category === selectedCategory);
-            setFilteredStores(filtered);
-        }
+        filterStores(selectedCategory, searchQuery);
     };
 
     const handleSearch = (query) => {
-        const lowerCaseQuery = query.toLowerCase();
-        const filtered = stores.filter(
-            (store) =>
-                store.name.toLowerCase().includes(lowerCaseQuery) ||
-                store.description.toLowerCase().includes(lowerCaseQuery)
-        );
+        setSearchQuery(query);
+        filterStores(categoryFilter, query);
+    };
+
+    const filterStores = (category, query) => {
+        let filtered = stores;
+        if (category) {
+            filtered = filtered.filter((store) => store.category === category);
+        }
+        if (query) {
+            const lowerCaseQuery = query.toLowerCase();
+            filtered = filtered.filter(
+                (store) =>
+                    store.name.toLowerCase().includes(lowerCaseQuery) ||
+                    store.description.toLowerCase().includes(lowerCaseQuery)
+            );
+        }
         setFilteredStores(filtered);
     };
 
@@ -77,8 +84,34 @@ const StoresPage = () => {
                 your nearest stores for an in-person shopping experience.
             </p>
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
-                {/* Filter and search inputs */}
+            <div style={{ marginBottom: '20px' }}>
+                <label htmlFor="category" style={{ marginRight: '10px' }}>Filter by Category:</label>
+                <select
+                    id="category"
+                    value={categoryFilter}
+                    onChange={(e) => handleCategoryChange(e.target.value)}
+                    style={{ fontSize: '16px', padding: '5px', borderRadius: '4px' }}
+                >
+                    <option value="">All Categories</option>
+                    {/* Add unique categories dynamically */}
+                    {[...new Set(stores.map((store) => store.category))].map((category) => (
+                        <option key={category} value={category}>
+                            {category}
+                        </option>
+                    ))}
+                </select>
+            </div>
+
+            <div style={{ marginBottom: '20px' }}>
+                <label htmlFor="search" style={{ marginRight: '10px' }}>Search:</label>
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search for a store..."
+                    onChange={(e) => handleSearch(e.target.value)}
+                    value={searchQuery}
+                    style={{ fontSize: '16px', padding: '5px', borderRadius: '4px', width: '100%' }}
+                />
             </div>
 
             <ul style={{ listStyle: 'none', padding: '0' }}>
@@ -106,9 +139,3 @@ const StoresPage = () => {
 };
 
 export default StoresPage;
-
-
-
-
-
-
