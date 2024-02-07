@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 
 
@@ -73,7 +74,7 @@ const AsusPage = () => {
           <li>Windows 11 Home (64-bit)</li>
           <li>Intel® Core™ i9-13900H Processor 2.6 GHz (24M Cache, up to 5.4 GHz, 14 cores: 6 P-cores and 8 E-cores)</li>
           <li>NVIDIA® GeForce RTX™ 3050</li>
-          <li>16.0" WUXGA(WU) 1920X1200 Wide View</li>
+          <li>16.0 WUXGA(WU) 1920X1200 Wide View</li>
           <li>8GB DDR4 + 8GB DDR4 SO-DIMM</li>
           <li>1TB M.2 NVMe™ PCIe® 3.0 SSD</li>
           <li>2 Years International Warranty</li>
