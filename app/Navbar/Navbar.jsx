@@ -22,7 +22,7 @@ export default function Navbar() {
             <Link href="/products/category4">All Products</Link>
           </div>
         </div>
-        <Link href="/contact" className={styles.navItem}>
+        <Link href="/contactandHelp" className={styles.navItem}>
           Contact
         </Link>
         <Link href="/profile" className={`${styles.navItem}`}>
