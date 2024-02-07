@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 const ProductPage = () => {
   const [images, setImages] = useState({
-    img1: "/Product Pictures/iphone 15_1.jpg",
-    img2: "/Product Pictures/iphone15_2.jpg",
-    img3: "/Product Pictures/iphone15_3.jpg",
+    img1: "/iphone 15_1.jpg",
+    img2: "/iphone15_2.jpg",
+    img3: "/iphone15_3.jpg",
   });
 
   const [activeImg, setActiveImage] = useState(images.img1);
