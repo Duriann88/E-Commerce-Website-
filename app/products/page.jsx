@@ -3,9 +3,9 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Cancel from './cancel/cancel';
-import Store from './pages/Store';
-import Success from './Success/page';
+import Cancel from './cancel/page';
+import Store from './store/page';
+import Success from './success/page';
 import CartProvider from './CartContext';
 import CartModal from './components/CartModal';
 
