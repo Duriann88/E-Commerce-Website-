@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import CartModal from '@/components/CartModal';
+import CartModal from '@/components/cartModal';
 import { Button } from 'react-bootstrap';
 import Link from 'next/link';
 
