@@ -1,5 +1,7 @@
+// Jaden - Full Ownership
+
 import Button from 'react-bootstrap/Button';
-import { CartContext } from '@/app/cartContext';
+import { CartContext } from '@/app/CartContext';
 import { useContext } from 'react';
 import { getProductData } from '@/app/productsStore';
 
