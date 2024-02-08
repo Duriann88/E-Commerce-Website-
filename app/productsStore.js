@@ -1,3 +1,5 @@
+// Jaden - Full Ownership
+
 // Creating an array will allow easier access to the product and its details that can be used for other pages.
 // Array shows: the id, the title, the price and the image.
 const productsArray = [
