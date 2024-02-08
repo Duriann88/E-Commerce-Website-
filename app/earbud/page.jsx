@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 import CartModal from '@/components/cartModal';
 import { Button } from 'react-bootstrap';
-import Link from 'next/link';
+import Footer from '@/components/Footer';
 
 //Assigning earbuf photos to img variable
 const EarbudPage = () => {
@@ -91,6 +91,7 @@ const EarbudPage = () => {
           <li>360 dio support Deep Neural Network + Personalized Beamforming</li>
           <li>Auto Switching</li>
         </ul>
+        <Footer />
       </div>
     </div>
     </>
