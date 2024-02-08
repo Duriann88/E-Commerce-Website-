@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\app",
+    "\\app\\asus",
+    "\\app\\earbud",
+    "\\app\\iphone",
+    "\\app\\products",
+    "\\app\\store",
+    "\\app\\stores",
+    "\\app\\success",
+    "\\components"
   ],
-  "SelectedNode": "\\C:\\Users\\enric\\Downloads\\CSS App\\CSS-ASG2",
+  "SelectedNode": "\\app\\products\\page.jsx",
   "PreviewInSolutionExplorer": false
 }
