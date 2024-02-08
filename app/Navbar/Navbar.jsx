@@ -16,14 +16,13 @@ export default function Navbar() {
         <div className={styles.dropdown}>
           <span className={styles.navItem}>Products</span>
           <div className={styles.dropdownContent}>
-            <Link href="/products/category1">Computers</Link>
-            <Link href="/products/category2">Phones</Link>
-            <Link href="/products/category3">Earbuds</Link>
-            <Link href="/products">All Products</Link>
-            {/* Add more links for different product categories */}
+            <Link href="/asus">Computers</Link>
+            <Link href="/iphone">Phones</Link>
+            <Link href="/earbud">Earbuds</Link>
+            <a href="/products">All Products</a>
           </div>
         </div>
-        <Link href="/contactAndHelp" className={styles.navItem}>
+        <Link href="/contactandHelp" className={styles.navItem}>
           Contact
         </Link>
         <Link href="/stores" className={styles.navItem}>
@@ -36,5 +35,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
-
