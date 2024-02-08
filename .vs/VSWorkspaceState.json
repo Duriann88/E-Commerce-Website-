@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\app",
-    "\\app\\asus",
-    "\\app\\earbud",
+    "\\app\\contactAndHelp",
     "\\app\\iphone",
+    "\\app\\Navbar",
     "\\app\\products",
     "\\app\\store",
     "\\app\\stores",
     "\\app\\success",
     "\\components"
   ],
-  "SelectedNode": "\\app\\products\\page.jsx",
+  "SelectedNode": "\\app\\stores\\page.jsx",
   "PreviewInSolutionExplorer": false
 }

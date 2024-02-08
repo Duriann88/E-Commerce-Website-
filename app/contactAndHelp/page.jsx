@@ -1,6 +1,7 @@
 //Enrico Owen (S10222581D)
 "use client";
 import React, { useState } from 'react';
+import Footer from '@/components/Footer';
 
 const ContactHelpPage = () => {
     const [faqItems] = useState([
@@ -35,6 +36,7 @@ const ContactHelpPage = () => {
     };
 
     return (
+        <>
         <div style={{ fontFamily: 'Arial, sans-serif', maxWidth: '600px', margin: '0 auto' }}>
             <section style={{ marginBottom: '30px' }}>
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>Contact Us</h1>
@@ -108,6 +110,9 @@ const ContactHelpPage = () => {
                 </ul>
             </section>
         </div>
+            <Footer />
+        </>
+        
     );
 };
 

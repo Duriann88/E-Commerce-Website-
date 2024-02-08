@@ -1,7 +1,7 @@
 //Enrico Owen (S10222581D)
 "use client"
 import React, { useState } from 'react';
-
+import Footer from '@/components/Footer';
 const StoresPage = () => {
     const [stores, setStores] = useState([
         {
@@ -77,6 +77,7 @@ const StoresPage = () => {
     };
 
     return (
+        <>
         <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px', fontFamily: 'Arial, sans-serif' }}>
             <h1 style={{ fontSize: '24px', marginBottom: '20px' }}>Available Stores in Singapore</h1>
             <p style={{ fontSize: '16px', marginBottom: '20px' }}>
@@ -135,6 +136,8 @@ const StoresPage = () => {
                 ))}
             </ul>
         </div>
+        <Footer />
+        </>
     );
 };
 
