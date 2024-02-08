@@ -1,16 +1,20 @@
+// Jaden - Full Ownership
+
 import {Button, Navbar, Modal} from 'react-bootstrap';
 import { useState, useContext } from 'react';
-import { CartContext } from "@/app/cartContext";
-import CartProduct from './cartProduct';
+import { CartContext } from "@/app/CartContext";
+import CartProduct from './CartProduct';
 
+// This function is a cart modal that pops up when a user clicks on it.
 export default function CartModal() {
 
     const cart = useContext(CartContext);
 
-    const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const [show, setShow] = useState(false);
 
+    // This function is an asynchronous function that redirects the user to the payment checkout gateway provided by Stripe.
     const checkout = async () => {
         await fetch('http://localhost:4000/checkout', {
             method: "POST",
@@ -29,6 +33,7 @@ export default function CartModal() {
 
     const productsCount = cart.items.reduce((sum, product) => sum + product.quantity, 0);
 
+    // Returns a modal that shows the current products in the cart.
     return(
         <>
             <Navbar expand="sm">
@@ -44,7 +49,7 @@ export default function CartModal() {
                 <Modal.Body>
                     {productsCount > 0 ?
                         <>
-                            <p>Items in your cart:</p>
+                            <h2>Your cart:</h2>
                             {cart.items.map( (currentProduct, idx) => (
                                 <CartProduct key={idx} id={currentProduct.id} quantity={currentProduct.quantity}></CartProduct>
                             ))}
@@ -52,14 +57,15 @@ export default function CartModal() {
                             <h1>Total: ${cart.getTotalCost().toFixed(2)}</h1>
 
                             <Button variant="success" onClick={checkout}>
-                                Purchase items!
+                                Checkout
                             </Button>
                         </>
                     :
-                        <h2>There are no items in your cart!</h2>
+                        <h2>Cart is empty.</h2>
                     }
                 </Modal.Body>
             </Modal>
         </>
     )
 }
+

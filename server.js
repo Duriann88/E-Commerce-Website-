@@ -1,7 +1,10 @@
+// Jaden - Full Ownership
+
 const express = require('express'); // This is to import express 
-var cors = require('cors'); // This is to import Cross-Origin Resource Sharing
+const cors = require('cors'); // This is to import Cross-Origin Resource Sharing
+const stripeSecretKey = process.env.NEXT_APP_STRIPE_SECRET_KEY;
 // This is to use stripe and the secret key is needed.
-const stripe = require('stripe')('sk_test_51Od8UZBq8eoYGYKSiDCwusBOwxxLHR1gnRK0muFyBHOFatK6XqJtnqRCgFp18dVECMpBifPZZ0kmbN0Zb5aJ5Pm3007iGlmQNC');
+const stripe = require('stripe')(stripeSecretKey);
 
 const app = express(); // Assigns express to constant app
 app.use(cors()); // This enables CORS which allows the server to accept requests from different places.
@@ -17,7 +20,7 @@ app.post("/checkout", async (req, res) => { // Defining a "POST" route called '/
                 quantity: item.quantity
             }
         )
-    });
+    }); 
 
     const session = await stripe.checkout.sessions.create({
         line_items: lineItems,

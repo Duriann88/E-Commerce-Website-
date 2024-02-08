@@ -1,5 +1,7 @@
+// Jaden - Full Ownership
+
 import { Card, Button, Form, Row, Col } from 'react-bootstrap';
-import { CartContext } from '@/app/cartContext';
+import { CartContext } from '@/app/CartContext';
 import { useContext } from 'react';
 
 function ProductCard(props){
@@ -7,6 +9,7 @@ function ProductCard(props){
     const cart = useContext(CartContext);
     const productQuantity = cart.getProductQuantity(product.id); // To obtain the quantity of the product
 
+    //This is to create a product card for the relevant products in the array.
     return( 
         <Card>
             <Card.Body> 
@@ -22,7 +25,7 @@ function ProductCard(props){
                                 <Button variant='dark' sm='6' onClick={() => cart.removeOneFromCart(product.id)} className='mx-2'>-</Button>
                             </Col>
                         </Form>
-                        <Button variant='dark' onClick={()=> cart.deleteFromCart(product.id)} className='my-2'>Remove From Cart</Button>
+                        <Button variant='dark' onClick={()=> cart.deleteFromCart(product.id)} className='my-2'>Remove</Button>
                     </>
                     :
                     <Button variant='dark' onClick={() => cart.addOneToCart(product.id)}>Add To Cart</Button>
