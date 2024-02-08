@@ -10,14 +10,14 @@ export const CartContext = createContext({  // Creates a new cart context
     getTotalCost: () => {}
 });
 
-export function CartProvider({children}){
+export default function CartProvider({children}){
     const [cartProducts, setCardProducts] = useState([]); // cartProducts is the items that are in the cart
 
     //Helper Functions
     function getProductQuantity(id){ // returns the quantity of each product in the shopping cart
-        const quantity = cartProducts.find(product => product.id === id)?.quantity;
+        const quantity = cartProducts.find(product => product.id === id)?.quantity; //Searches for the product quantity
 
-        if (quantity === undefined){
+        if (quantity === undefined){ // If there is no quantity, return 0 as the quantity
             return 0;
         }
 
@@ -100,5 +100,3 @@ export function CartProvider({children}){
         </CartContext.Provider>
     )
 }
-
-export default CartProvider;
