@@ -1,4 +1,4 @@
-import React from 'react' ;
+import React from 'react';
 import { FaUser, FaMapMarkerAlt, FaRegCalendar, FaShoppingBag, FaLock, FaUserShield } from 'react-icons/fa';
 
 const Profile = () => {
