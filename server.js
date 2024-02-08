@@ -2,6 +2,7 @@
 
 const express = require('express'); // This is to import express 
 const cors = require('cors'); // This is to import Cross-Origin Resource Sharing
+require('dotenv').config(); // This is so the .env file can be read
 const stripeSecretKey = process.env.NEXT_APP_STRIPE_SECRET_KEY;
 // This is to use stripe and the secret key is needed.
 const stripe = require('stripe')(stripeSecretKey);
