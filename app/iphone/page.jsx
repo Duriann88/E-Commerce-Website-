@@ -51,10 +51,13 @@ const IphonePage = () => {
           <img src={images.img2} style={thumbnailStyle} onClick={() => setActiveImage(images.img2)} />
           <img src={images.img3} style={thumbnailStyle} onClick={() => setActiveImage(images.img3)} />
         </div>
+        <video controls autoPlay style={{ width: '100%', marginTop: '16px' }}>
+          <source src="/Introducing iPhone 15 Pro _ Apple.mp4" type="video/mp4" />
+        </video>
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <span style={{ color: '#6B46C1', fontWeight: 'bold' }}>Brand New</span>
-        <h1 style={{ fontSize: '24px', fontWeight: 'bold' }}>iPhone 15</h1>
+        <h1 style={{ fontSize: '24px', fontWeight: 'bold' }}>Asus Vivobook 16X</h1>
         <p style={{ color: '#4B5563', width: '80%' }}>
           The innovative new design features back glass that has colour infused
           throughout the material. A custom dual ion-exchange process for the glass,
@@ -70,7 +73,7 @@ const IphonePage = () => {
         </div>
         <button style={{ ...buttonStyle, marginTop: '16px' }}>Add To Cart</button>
         <h2>Specifications</h2>
-        <ul style={{ textAlign: 'center' }}>
+        <ul style={{ textAlign: 'left' }}>
           <li>A16 Bionic chip (4 nm)</li>
           <li>6.1″ inch Amoled, 60 Hz</li>
           <li>48 MP Main + 12 MP Ultra Wide</li>
@@ -82,4 +85,5 @@ const IphonePage = () => {
 };
 
 export default IphonePage;
+
 
