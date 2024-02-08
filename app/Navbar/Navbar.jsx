@@ -22,7 +22,7 @@ export default function Navbar() {
             <a href="/products">All Products</a>
           </div>
         </div>
-        <Link href="/contactandHelp" className={styles.navItem}>
+        <Link href="/contactAndHelp" className={styles.navItem}>
           Contact
         </Link>
         <Link href="/stores" className={styles.navItem}>

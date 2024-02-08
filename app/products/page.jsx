@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Cancel from '@/app/cancel/page';
 import Store from '@/app/store/page';
 import Success from '@/app/success/page';
-import CartProvider from '@/app/CartContext';
+import CartProvider from '@/app/cartContext';
 import CartModal from '@/components/CartModal';
 
 function App() {
