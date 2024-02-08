@@ -3,6 +3,7 @@
 /* Styles for the main footer container */
 .footer {
   background-color: #293039; /* Background color */
+   width: 100%;
   color: #fff; /* Text color */
   text-align: left; /* Align text to the left */
   padding: 20px 0; /* Top and bottom padding */
