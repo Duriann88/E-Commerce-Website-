@@ -2,7 +2,7 @@
 
 import { Row, Col } from 'react-bootstrap';
 import { productsArray } from '@/app/productsStore';
-import ProductCard from '@/components/ProductCard';
+import ProductCard from '@/components/productCard';
 
 // The function is to show the store page and the product cards that are created.
 function Store(){
