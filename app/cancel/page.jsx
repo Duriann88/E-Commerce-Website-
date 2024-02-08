@@ -15,6 +15,7 @@ function Cancel(){
                 <a href='/products'>Continue Shopping</a> 
             </Button>
             </div>
+            <Footer />
         </>
     )
 }
