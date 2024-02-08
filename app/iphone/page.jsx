@@ -3,7 +3,7 @@
 "use client";
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import Link from 'next/link';
+import Footer from '@/components/Footer';
 
 //Assigning iphone photos to img variable
 const IphonePage = (props) => {
@@ -93,6 +93,7 @@ const IphonePage = (props) => {
           <li>48 MP Main + 12 MP Ultra Wide</li>
           <li>3349 mAh 20 Watt Charger</li>
         </ul>
+        <Footer />
       </div>
     </div>
     </>
