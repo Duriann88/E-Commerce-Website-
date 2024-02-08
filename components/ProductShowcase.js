@@ -1,23 +1,31 @@
-
-import React from 'react';
 import styles from './productShowCase.module.css'; // Import CSS module for styling
-import Link from 'next/link';
+// Define the ProductShowcase component
 const ProductShowcase = () => {
   return (
+    // Section containing the product showcase with a class name from the CSS module
     <section className={styles['product-showcase']}>
+      {/* Container for the product title */}
       <div className={styles['product-title']}>
+        {/* Link to the products page */}
         <a href="/products">Our Products</a>
       </div>
+      
       {/* Category Carousel */}
-      <div className={`${styles['horizontal-image-movement']} ${styles['category-carousel']}`}>
+      <div className={`${styles['category-carousel']}`}>
         {/* Link images to product details */}
-        <Link href="/asus">
+
+        <a href="/asus">
+          {/* Image for Asus product */}
           <img src="/Asus computer.jpg" alt="Computer" />
-        </Link>
+        </a>
+        
+        {/* Image for iPhone product */}
         <a href="/iphone">
           <img src="/Iphone.jpg" alt="Iphone" />
         </a>
-        <a href = "earbud">
+        
+        {/* Image for Earbud product */}
+        <a href="earbud">
           <img src="/Evolve earbud.jpg" alt="Earbud"/>
         </a>
       </div>
@@ -25,7 +33,9 @@ const ProductShowcase = () => {
   );
 };
 
+// Export the ProductShowcase component
 export default ProductShowcase;
+
 
 
 

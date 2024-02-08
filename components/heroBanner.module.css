@@ -1,18 +1,21 @@
 /* components/HeroBanner.module.css */
 
+/* Styling for the container of the hero banner */
 .Container {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
+  position: relative; /* Positioned relative to its normal position */
+  height: 100vh; /* Sets the height to 100% of the viewport height */
+  overflow: hidden; /* Hides any content that overflows the container */
 }
 
+/* Styling for the video element within the hero banner */
 .Video {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: auto;
-  z-index: -1;
+  position: absolute; /* Positioned absolutely within its containing element */
+  top: 0; /* Positioned at the top of its containing element */
+  width: 100%; /* Sets the width to 100% of its containing element */
+  height: auto; /* Allows the height to adjust proportionally to maintain aspect ratio */
+  z-index: -1; /* Places the video behind other content (z-index: -1) */
 }
+
 
 
 

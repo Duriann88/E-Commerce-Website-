@@ -1,38 +1,10 @@
 import React from 'react';
-import { FaUser, FaMapMarkerAlt, FaRegCalendar, FaShoppingBag, FaLock, FaUserShield } from 'react-icons/fa';
+import { FaUser, FaMapMarkerAlt, FaRegCalendar } from 'react-icons/fa'; // Remove unused icons
+import Footer from '@/components/footer';
 
 const Profile = () => {
   return (
-    <div style={{ display: 'flex', maxWidth: '800px', margin: 'auto', fontFamily: 'Arial, sans-serif' }}>
-      {/* Sidebar */}
-      <div style={{ width: '200px', backgroundColor: '#f0f2f5', padding: '20px', marginRight: '20px' }}>
-        <div style={{ marginBottom: '20px' }}>
-          <h2 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '10px', color: '#293039', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>
-            <a href="/login-security" style={{ textDecoration: 'none', color: '#293039' }}>
-              <FaLock style={{ marginRight: '10px' }} />
-              Login & Security
-            </a>
-          </h2>
-          <h2 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '10px', color: '#293039', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>
-            <a href="/profile" style={{ textDecoration: 'none', color: '#293039' }}>
-              <FaUser style={{ marginRight: '10px' }} />
-              Your Profile
-            </a>
-          </h2>
-          <h2 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '10px', color: '#293039', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>
-            <a href="/privacy-settings" style={{ textDecoration: 'none', color: '#293039' }}>
-              <FaUserShield style={{ marginRight: '10px' }} />
-              Privacy Settings
-            </a>
-          </h2>
-          <h2 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '10px', color: '#293039', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>
-            <a href="/purchasing-history" style={{ textDecoration: 'none', color: '#293039' }}>
-              <FaShoppingBag style={{ marginRight: '10px' }} />
-              Purchasing History
-            </a>
-          </h2>
-        </div>
-      </div>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
       {/* Profile Content */}
       <div style={{ flex: '1', padding: '20px' }}>
         <h1 style={{ fontSize: '24px', fontWeight: 'bold', textAlign: 'center', marginBottom: '20px', fontFamily: 'Arial, sans-serif' }}>
@@ -84,6 +56,8 @@ const Profile = () => {
           </div>
         </div>
       </div>
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
