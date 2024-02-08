@@ -25,6 +25,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </Container>
+      <Footer />
     </CartProvider>
   );
 }

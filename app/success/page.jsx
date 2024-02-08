@@ -16,6 +16,7 @@ function Success(){
                 <a href='/products'>Continue Shopping</a>
             </Button>
             </div>
+            <Footer />
         </>
     )
 }
