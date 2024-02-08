@@ -2,7 +2,7 @@
 "use client";
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import Footer from '@/components/Footer';
+import Footer from '@/components/footer';
 
 //Assigning iphone photos to img variable
 const IphonePage = (props) => {

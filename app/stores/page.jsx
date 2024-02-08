@@ -1,7 +1,7 @@
 //Enrico Owen (S10222581D)
 "use client"
 import React, { useState } from 'react';
-import Footer from '@/components/Footer';
+import Footer from '@/components/footer';
 const StoresPage = () => {
     const [stores, setStores] = useState([
         {

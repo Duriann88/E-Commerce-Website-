@@ -1,7 +1,7 @@
 // Jaden - Full Ownership
 
 import { Button } from "react-bootstrap";
-
+import Footer from '@/components/footer';
 // This function is the cancel page if the user decides to cancel the transaction.
 // It prints a cancel message and has a button for the user to click if they choose to continue browsing the products.
 function Cancel(){

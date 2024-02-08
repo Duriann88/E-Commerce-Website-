@@ -9,6 +9,7 @@ import Store from '@/app/store/page';
 import Success from '@/app/success/page';
 import CartProvider from '@/app/cartContext';
 import CartModal from '@/components/cartModal';
+import Footer from '@/components/footer';
 
 //This functions just creates the product page and the routes to direct the user to the different paths based on their actions.
 //The elements are just the pages that will be shown when they are directed to the routes.
