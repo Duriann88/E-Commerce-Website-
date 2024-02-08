@@ -1,5 +1,5 @@
 
-import styles from './heroBanner.css';
+import styles from './heroBanner.module.css';
 
 const HeroBanner = () => {
   return (

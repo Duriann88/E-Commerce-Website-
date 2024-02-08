@@ -1,6 +1,6 @@
 
 import React from 'react';
-import styles from './productShowCase.css'; // Import CSS module for styling
+import styles from './productShowCase.module.csscss'; // Import CSS module for styling
 import Link from 'next/link';
 const ProductShowcase = () => {
   return (
