@@ -1,3 +1,5 @@
+// Jaden - Full Ownership
+
 import { createContext, useState } from "react"; 
 import { productsArray, getProductData } from "./productsStore";
 
