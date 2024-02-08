@@ -1,8 +1,30 @@
-import React from 'react';
+"use client";
+import React, { useState } from 'react';
 import { FaUser, FaMapMarkerAlt, FaRegCalendar } from 'react-icons/fa'; // Remove unused icons
 import Footer from '@/components/footer';
 
 const Profile = () => {
+  // State variables to hold the user's profile information
+  const [name, setName] = useState('John Doe');
+  const [email, setEmail] = useState('john.doe@example.com');
+  const [phone, setPhone] = useState('+1234567890');
+  const [street, setStreet] = useState('123 Main St');
+  const [city, setCity] = useState('Anytown');
+  const [state, setState] = useState('AnyState');
+  const [postalCode, setPostalCode] = useState('12345');
+  const [country, setCountry] = useState('AnyCountry');
+  
+  // State variable to track whether the profile is in edit mode or not
+  const [isEditMode, setIsEditMode] = useState(false);
+
+  // Function to handle updating the profile information
+  const handleUpdateProfile = () => {
+    // Logic to send updated profile data to the backend server
+    console.log('Profile updated:', { name, email, phone, street, city, state, postalCode, country });
+    // Exit edit mode after updating
+    setIsEditMode(false);
+  };
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
       {/* Profile Content */}
@@ -18,15 +40,16 @@ const Profile = () => {
               <FaUser style={{ marginRight: '10px' }} />
               Personal Information
             </h2>
+            {/* Editable input fields for personal information */}
             <div style={{ color: '#293039', fontFamily: 'Arial, sans-serif' }}>
               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '8px' }}>
-                <span>Name:</span> John Doe
+                <span>Name:</span> {isEditMode ? <input type="text" value={name} onChange={(e) => setName(e.target.value)} /> : name}
               </div>
               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '8px' }}>
-                <span>Email:</span> john.doe@example.com
+                <span>Email:</span> {isEditMode ? <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} /> : email}
               </div>
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <span>Phone:</span> +1234567890
+                <span>Phone:</span> {isEditMode ? <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} /> : phone}
               </div>
             </div>
           </div>
@@ -36,30 +59,50 @@ const Profile = () => {
               <FaMapMarkerAlt style={{ marginRight: '10px' }} />
               Address
             </h2>
+            {/* Editable input fields for address */}
             <div style={{ color: '#293039', fontFamily: 'Arial, sans-serif' }}>
               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '8px' }}>
-                <span>Street:</span> 123 Main St
+                <span>Street:</span> {isEditMode ? <input type="text" value={street} onChange={(e) => setStreet(e.target.value)} /> : street}
               </div>
               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '8px' }}>
-                <span>City:</span> Anytown
+                <span>City:</span> {isEditMode ? <input type="text" value={city} onChange={(e) => setCity(e.target.value)} /> : city}
               </div>
               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '8px' }}>
-                <span>State:</span> AnyState
+                <span>State:</span> {isEditMode ? <input type="text" value={state} onChange={(e) => setState(e.target.value)} /> : state}
               </div>
               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '8px' }}>
-                <span>Postal Code:</span> 12345
+                <span>Postal Code:</span> {isEditMode ? <input type="text" value={postalCode} onChange={(e) => setPostalCode(e.target.value)} /> : postalCode}
               </div>
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <span>Country:</span> AnyCountry
+                <span>Country:</span> {isEditMode ? <input type="text" value={country} onChange={(e) => setCountry(e.target.value)} /> : country}
               </div>
             </div>
           </div>
+          {/* Button to toggle edit mode and update profile */}
+          <div style={{ padding: '20px', textAlign: 'center' }}>
+            {isEditMode ? (
+              <button style={{ padding: '10px 20px', backgroundColor: '#293039', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer', marginRight: '10px' }} onClick={handleUpdateProfile}>
+                Update Profile
+              </button>
+            ) : (
+              <button style={{ padding: '10px 20px', backgroundColor: '#293039', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer', marginRight: '10px' }} onClick={() => setIsEditMode(true)}>
+                Edit Profile
+              </button>
+            )}
+            {/* Button to cancel editing */}
+            {isEditMode && (
+              <button style={{ padding: '10px 20px', backgroundColor: '#dc3545', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }} onClick={() => setIsEditMode(false)}>
+                Cancel
+              </button>
+            )}
+          </div>
         </div>
       </div>
-      {/* Footer */}
       <Footer />
     </div>
   );
 };
 
 export default Profile;
+
+

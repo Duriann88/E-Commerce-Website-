@@ -1,3 +1,5 @@
+// Jeremy-Full OwnerShip
+
 // Import React library
 import React from 'react';
 // Import social media icons from react-icons library

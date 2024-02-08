@@ -1,7 +1,7 @@
 // Jaden - Full Ownership
 
 import { Card, Button, Form, Row, Col } from 'react-bootstrap';
-import { CartContext } from '@/app/CartContext';
+import { CartContext } from '@/app/cartContext';
 import { useContext } from 'react';
 
 function ProductCard(props){
