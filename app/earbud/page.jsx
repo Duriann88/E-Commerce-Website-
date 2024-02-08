@@ -1,5 +1,4 @@
-//Name: New Brandon
-//Student No.: S10258236F
+//Full Owner - Brandon
 "use client";
 import React, { useState } from 'react';
 import CartModal from '@/components/cartModal';
