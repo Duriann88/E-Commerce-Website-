@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import Footer from "@/components/footer";
 
 // This function is the success page if the user decides to go through with the transaction.
 // It prints a success message and has a button for the user to click if they choose to continue browsing the products.
