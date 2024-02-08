@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 import CartModal from '@/components/cartModal';
 import { Button } from 'react-bootstrap';
-import Footer from '@/components/Footer';
+import Footer from '@/components/footer';
 
 //Assigning earbuf photos to img variable
 const EarbudPage = () => {

@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from 'react';
-import { FaUser, FaMapMarkerAlt, FaRegCalendar } from 'react-icons/fa'; // Remove unused icons
-import Footer from '@/components/footer';
+import { FaUser, FaMapMarkerAlt, FaRegCalendar } from 'react-icons/fa'; // Import necessary icons
+import Footer from '@/components/footer'; // Import Footer component
 
+// Define the Profile component
 const Profile = () => {
   // State variables to hold the user's profile information
   const [name, setName] = useState('John Doe');
@@ -29,13 +30,16 @@ const Profile = () => {
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
       {/* Profile Content */}
       <div style={{ flex: '1', padding: '20px' }}>
+        {/* Profile title */}
         <h1 style={{ fontSize: '24px', fontWeight: 'bold', textAlign: 'center', marginBottom: '20px', fontFamily: 'Arial, sans-serif' }}>
           <FaRegCalendar style={{ marginRight: '10px' }} />
           Your Profile
         </h1>
+        {/* Profile details section */}
         <div style={{ background: '#fff', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)', borderRadius: '8px', overflow: 'hidden' }}>
           {/* Personal Information */}
           <div style={{ padding: '20px', borderBottom: '1px solid #eee' }}>
+            {/* Personal information title */}
             <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px', color: '#293039', fontFamily: 'Arial, sans-serif' }}>
               <FaUser style={{ marginRight: '10px' }} />
               Personal Information
@@ -55,6 +59,7 @@ const Profile = () => {
           </div>
           {/* Address */}
           <div style={{ padding: '20px', borderBottom: '1px solid #eee' }}>
+            {/* Address title */}
             <h2 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px', color: '#293039', fontFamily: 'Arial, sans-serif' }}>
               <FaMapMarkerAlt style={{ marginRight: '10px' }} />
               Address
@@ -80,6 +85,7 @@ const Profile = () => {
           </div>
           {/* Button to toggle edit mode and update profile */}
           <div style={{ padding: '20px', textAlign: 'center' }}>
+            {/* Conditional rendering of buttons based on edit mode */}
             {isEditMode ? (
               <button style={{ padding: '10px 20px', backgroundColor: '#293039', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer', marginRight: '10px' }} onClick={handleUpdateProfile}>
                 Update Profile
@@ -98,11 +104,10 @@ const Profile = () => {
           </div>
         </div>
       </div>
+      {/* Footer component */}
       <Footer />
     </div>
   );
 };
 
-export default Profile;
-
-
+export default Profile; // Export the Profile component
