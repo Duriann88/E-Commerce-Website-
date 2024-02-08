@@ -3,7 +3,7 @@
 "use client";
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import Link from 'next/link';
+import Footer from '@/components/Footer';
 
 //Assigning asus vivobook photos to img variable
 const AsusPage = () => {
@@ -88,6 +88,7 @@ const AsusPage = () => {
           <li>1TB M.2 NVMe™ PCIe® 3.0 SSD</li>
           <li>2 Years International Warranty</li>
         </ul>
+        <Footer />
       </div>
     </div>
   )
